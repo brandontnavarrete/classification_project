@@ -28,3 +28,10 @@ The data was pulled from a local csv file but is also located on Sequel Ace
 
 # Prepare Data
 
+
+
+# Data Dictionary
+
+| Feature | Definition |
+|:--------|:-----------|
+|Churn| True or False, the customer has stopped commerce with Telco.|
