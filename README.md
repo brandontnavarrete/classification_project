@@ -76,3 +76,15 @@ My initial hypothesis is that key variables will have a strong correlation to ou
 |internet_service_type| Categorical, fiber optic, dsl, none       |
 |paymeny_type| Categorical, electronic check, mailed check, bank transfer, credit card |
 
+# # Steps to Reproduce
+1) Clone this repo.
+2) Acquire the data from Sequel Ace. (Using your own env file)
+3) Put the data in the file containing the cloned repo.
+6) Run notebook.
+
+# Recommendations
+* Focus on pushing tech support, as well as, being senior friendly.
+* Incentives new customer(shorter terms) with long term deals
+* Create bundles or savings deals for customer who pay more, or may have multiple products.
+
+
