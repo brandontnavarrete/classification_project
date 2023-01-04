@@ -102,7 +102,7 @@ def get_knn(train_x, validate_x, train_y, validate_y,kn):
 
 ###################################
 
-def get_best_model(train_x, validate_x, train_y, validate_y,md):
+def get_best_model(train_x, validate_x, train_y, validate_y,md,test_x):
     '''get random forest accuracy on train and validate data and creates dataframe
        on test set.
     '''
