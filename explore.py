@@ -214,3 +214,28 @@ def get_t_tenure(train):
     
 #######################################
 
+def get_compare():
+    ''' get hard coded pie chart to compare baseline to best model'''
+    
+    labels = 'Churned', 'Non-Churn'
+    sizes = [26, 74]
+
+    fig, (ax1,ax2) = plt.subplots(1,2)
+    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+        startangle=75)
+
+    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+    ax1.title.set_text('Baseline Prediction')
+
+    labels = 'Churned', 'Non-Churn'
+    sizes = [20, 80]
+    
+    ax2.pie(sizes, labels=labels, autopct='%1.1f%%',
+    startangle= 90)
+    
+    ax2.axis('equal')
+
+    ax2.title.set_text('Best Model')
+
+    plt.show()
