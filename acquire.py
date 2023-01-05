@@ -10,13 +10,16 @@ import sklearn.preprocessing
 import env
 
 
-#####
+###############
 
+# setting connectiong to sequel server using env
 def get_connection(db, user=env.username, host=env.host, password=env.password):
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
 
 
-#####
+##################
+ 
+# acquiring telco data using a different function
 
 def get_telco_data(get_connection):
     filename = "telco_id.csv"
@@ -60,10 +63,8 @@ def get_telco_data(get_connection):
     # Return the dataframe to the calling code
     return df 
 
-#####
-
-
 ######## train, validate, test split ############
+
 
 def split_data(df):
     ''' 

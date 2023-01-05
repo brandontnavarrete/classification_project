@@ -9,6 +9,8 @@ from scipy import stats
 
 def get_churn_rate(train):
     
+    ''' get pie chart for churn rate''' 
+    
     values = [len(train.churn_Yes[train.churn_Yes == 0]),                               len(train.churn_Yes[train.churn_Yes == 1])] 
     labels = ['Customer','Churn', ] 
 
@@ -217,9 +219,12 @@ def get_t_tenure(train):
 def get_compare():
     ''' get hard coded pie chart to compare baseline to best model'''
     
+    # creating lables for baseline chart
     labels = 'Churned', 'Non-Churn'
+    # creating hard code numbers
     sizes = [26, 74]
-
+    
+    #plotting chart
     fig, (ax1,ax2) = plt.subplots(1,2)
     ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
         startangle=75)
@@ -228,6 +233,7 @@ def get_compare():
 
     ax1.title.set_text('Baseline Prediction')
 
+    # 
     labels = 'Churned', 'Non-Churn'
     sizes = [20, 80]
     

@@ -13,6 +13,8 @@ import prepare as pre
 
 def model_prep_stmt(train,validate,test):
 
+    ''' creating separate x and y variables and returning them'''
+    
     # keeping features columns
     keep_cols = ['senior_citizen',
                  'tenure',
@@ -132,5 +134,27 @@ def get_best_model(train_x, validate_x, train_y, validate_y,md,test_x):
     return prob_pred
     
 
+###################################
 
+def get_pred_df(prob_pred,test):
+    
+    ''' creating a data frame of prediction probability, predictions, and customer ids'''
+    
+    # creating a series
+    customer_id = test.customer_id
+    
+    # adding series to prob_pred data frame
+    prob_pred['Customer ID'] = customer_id
+    
+    # mapping values in predictions
+    prob_pred['Predictions'] = (prob_pred['Predictions'] > .50).astype(int)
+    
+    # mapping values in probability
+    prob_pred['Probability'] = (1 - prob_pred['Probability'] )
+    
+    # rename columns
+    prob_pred.rename(columns={'Probability': 'Probability of Churn'}, inplace=True)
+
+    
+    return prob_pred
 
