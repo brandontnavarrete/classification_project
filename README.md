@@ -1,4 +1,3 @@
-# Draft
 # Customer Churn Epidemic
 
 # Project Description
@@ -79,7 +78,7 @@ My initial hypothesis is that key variables will have a strong correlation to ou
 # # Steps to Reproduce
 1) Clone this repo.
 2) Acquire the data from Sequel Ace. (Using your own env file)
-3) Put the data in the file containing the cloned repo.
+3) Use the py files to replicate data.
 6) Run notebook.
 
 # Recommendations
