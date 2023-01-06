@@ -222,7 +222,7 @@ def get_compare():
     # creating lables for baseline chart
     labels = 'Churned', 'Non-Churn'
     # creating hard code numbers
-    sizes = [26, 74]
+    sizes = [27, 73]
     
     #plotting chart
     fig, (ax1,ax2) = plt.subplots(1,2)
